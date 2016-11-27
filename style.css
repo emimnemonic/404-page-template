@@ -4,6 +4,12 @@ html {
   padding: 0;
   overflow: scroll;
   overflow-x: hidden;
+  font: 300 20px/32px 'Raleway', sans-serif;
+}
+@media only screen and (max-width: 480px) {
+  html {
+    font: 300 16px/24px 'Raleway', sans-serif;
+  }
 }
 ::-webkit-scrollbar {
   width: 0;
@@ -13,6 +19,7 @@ body {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
+  color: #fff;
 }
 .homepage-hero-module {
   border-right: none;
@@ -44,7 +51,7 @@ body {
 .video-container .filter {
   z-index: 100;
   position: absolute;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.5);
   width: 100%;
 }
 .video-container video {
@@ -54,4 +61,16 @@ body {
 }
 .video-container video.fillWidth {
   width: 100%;
+}
+.text-container {
+  position: absolute;
+  padding: 2em;
+  max-width: 600px;
+  margin-left: calc((100% - 4em - 600px) / 2);
+  top: 10%;
+  z-index: 101;
+  text-align: center;
+}
+.title-text {
+  font: 700 2.6rem/3.6rem 'Raleway', sans-serif;
 }
