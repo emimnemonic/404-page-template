@@ -81,17 +81,11 @@ a:hover {
   font: 700 2.6rem/3.6rem 'Raleway', sans-serif;
 }
 @keyframes fade-search {
-  0% {
-    opacity: 1;
-  }
   100% {
     opacity: 0;
   }
 }
 @keyframes show-search {
-  0% {
-    opacity: 0;
-  }
   100% {
     opacity: 1;
   }
