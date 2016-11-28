@@ -1,4 +1,5 @@
-//jQuery is required to run this code
+// Credit to Coverr.co for the video and template code
+// Check out Coverr for free, beautiful videos for your homepage
 $( document ).ready(function() {
 
     scaleVideoContainer();
@@ -12,6 +13,23 @@ $( document ).ready(function() {
         scaleBannerVideoSize('.video-container .poster img');
         scaleBannerVideoSize('.video-container .filter');
         scaleBannerVideoSize('.video-container video');
+    });
+
+    var sIcon = $(".search-icon");
+
+    sIcon.on("click", function () {
+      $("#404-search").focus();
+    });
+
+    $("#404-search").focusin(function () {
+      sIcon.css("animation", "fade-search 0.6s linear");
+      sIcon.css("animation-fill-mode", "forwards");
+      sIcon.css("z-index", -5);
+    });
+
+    $("#404-search").focusout(function () {
+      sIcon.css("animation", "show-search 0.8s linear");
+      sIcon.css("animation-fill-mode", "forwards");
     });
 
 });

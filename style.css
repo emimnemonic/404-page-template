@@ -21,6 +21,12 @@ body {
   padding: 0;
   color: #fff;
 }
+a {
+  color: #fff;
+}
+a:hover {
+  text-decoration: none;
+}
 .homepage-hero-module {
   border-right: none;
   border-left: none;
@@ -65,12 +71,66 @@ body {
 .text-container {
   position: absolute;
   padding: 2em;
-  max-width: 600px;
+  max-width: 650px;
   margin-left: calc((100% - 4em - 600px) / 2);
-  top: 10%;
+  top: 5%;
   z-index: 101;
   text-align: center;
 }
 .title-text {
   font: 700 2.6rem/3.6rem 'Raleway', sans-serif;
+}
+@keyframes fade-search {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes show-search {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes scale-box {
+  0% {
+    width: calc(600px - 16em);
+  }
+  25% {
+    width: calc(600px - 20em);
+  }
+  100% {
+    width: calc(600px - 4em);
+  }
+}
+.search {
+  position: relative;
+  margin: 0 auto;
+}
+input[type="text"] {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  font: 300 1rem/1.5rem 'Raleway', sans-serif;
+  color: #fff;
+  padding: 4em 1em 1em;
+  width: calc(600px - 16em);
+}
+input:focus {
+  outline: none;
+  animation: scale-box 0.6s ease-in;
+  animation-fill-mode: forwards;
+}
+.search-icon:before {
+  font-family: 'FontAwesome';
+  content: "\f002";
+  font-size: 32px;
+  width: 12px;
+  position: absolute;
+  margin-left: calc(600px - 14em);
+  margin-top: 2.5em;
 }
